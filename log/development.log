@@ -966,3 +966,471 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 250ms (Views: 246.2ms | ActiveRecord: 0.4ms)
 
 
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddRememberDigestToUsers (20171101142757)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_digest" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (716.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (167.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20171030093758)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (4.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171030093758"]]
+  [1m[35m (168.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddIndexToUsersEmail (20171030094246)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (11.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171030094246"]]
+  [1m[35m (124.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPasswordDigestToUsers (20171030094439)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (6.9ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171030094439"]]
+  [1m[35m (102.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddRememberDigestToUsers (20171101142757)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_digest" varchar[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171101142757"]]
+  [1m[35m (102.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-11-01 14:48:28.270277"], ["updated_at", "2017-11-01 14:48:28.270277"]]
+  [1m[35m (107.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-11-01 16:38:58 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/ben/Documents/The_Hacking_Project/Semaine 5/Members3/app/helpers/sessions_helper.rb:60: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/helpers/sessions_helper.rb:60: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/static_pages_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-11-01 16:39:25 +0100
+  
+SyntaxError (/home/ben/Documents/The_Hacking_Project/Semaine 5/Members3/app/helpers/sessions_helper.rb:60: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/helpers/sessions_helper.rb:60: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/static_pages_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-11-01 16:50:43 +0100
+  
+SyntaxError (/home/ben/Documents/The_Hacking_Project/Semaine 5/Members3/app/helpers/sessions_helper.rb:60: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/helpers/sessions_helper.rb:60: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/static_pages_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-11-01 16:50:57 +0100
+  
+SyntaxError (/home/ben/Documents/The_Hacking_Project/Semaine 5/Members3/app/helpers/sessions_helper.rb:60: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/helpers/sessions_helper.rb:60: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/static_pages_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-11-01 17:00:42 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/ben/Documents/The_Hacking_Project/Semaine 5/Members3/app/helpers/sessions_helper.rb:60: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/helpers/sessions_helper.rb:60: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/static_pages_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-11-01 17:01:35 +0100
+  
+SyntaxError (/home/ben/Documents/The_Hacking_Project/Semaine 5/Members3/app/helpers/sessions_helper.rb:60: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/helpers/sessions_helper.rb:60: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/static_pages_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-11-01 17:02:11 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/ben/Documents/The_Hacking_Project/Semaine 5/Members3/app/helpers/sessions_helper.rb:60: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/helpers/sessions_helper.rb:60: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/static_pages_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-11-01 17:06:24 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (30.7ms)
+Completed 500 Internal Server Error in 80ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<Class:User (call 'User.connection' to establish a connection)>):
+     6:     <a href="http://www.railstutorial.org/">Tutoriel Ruby on Rails</a>.
+     7:   </h2>
+     8: 
+     9:  <% if logged_in? %>
+    10:   <%= link_to "Réponse de l'univers", reponse_path, class: "btn btn-lg btn-primary" %>
+    11:  <% else %> 
+    12:   <%= link_to "S'enregistrer", '/signup', class: "btn btn-lg btn-primary" %>
+  
+app/models/user.rb:14:in `singleton class'
+app/models/user.rb:12:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/helpers/sessions_helper.rb:22:in `current_user'
+app/helpers/sessions_helper.rb:34:in `logged_in?'
+app/views/static_pages/home.html.erb:9:in `_app_views_static_pages_home_html_erb___1151488208812685557_46950435002280'
+Started GET "/" for 127.0.0.1 at 2017-11-01 17:09:27 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 25ms
+
+
+  
+SyntaxError (/home/ben/Documents/The_Hacking_Project/Semaine 5/Members3/app/models/user.rb:14: syntax error, unexpected '.'
+    def .digest(string)
+         ^
+/home/ben/Documents/The_Hacking_Project/Semaine 5/Members3/app/models/user.rb:37: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/models/user.rb:14: syntax error, unexpected '.'
+app/models/user.rb:37: syntax error, unexpected keyword_end, expecting end-of-input
+app/helpers/sessions_helper.rb:22:in `current_user'
+app/helpers/sessions_helper.rb:34:in `logged_in?'
+app/views/static_pages/home.html.erb:9:in `_app_views_static_pages_home_html_erb___1151488208812685557_70072895150480'
+Started GET "/" for 127.0.0.1 at 2017-11-01 17:09:55 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (39.3ms)
+Completed 500 Internal Server Error in 50ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<Class:User (call 'User.connection' to establish a connection)>):
+     6:     <a href="http://www.railstutorial.org/">Tutoriel Ruby on Rails</a>.
+     7:   </h2>
+     8: 
+     9:  <% if logged_in? %>
+    10:   <%= link_to "Réponse de l'univers", reponse_path, class: "btn btn-lg btn-primary" %>
+    11:  <% else %> 
+    12:   <%= link_to "S'enregistrer", '/signup', class: "btn btn-lg btn-primary" %>
+  
+app/models/user.rb:14:in `singleton class'
+app/models/user.rb:12:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/helpers/sessions_helper.rb:22:in `current_user'
+app/helpers/sessions_helper.rb:34:in `logged_in?'
+app/views/static_pages/home.html.erb:9:in `_app_views_static_pages_home_html_erb___1151488208812685557_46950423442320'
+Started GET "/" for 127.0.0.1 at 2017-11-01 17:10:29 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (40.0ms)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<Class:0x0000556d1002f2b0>):
+     6:     <a href="http://www.railstutorial.org/">Tutoriel Ruby on Rails</a>.
+     7:   </h2>
+     8: 
+     9:  <% if logged_in? %>
+    10:   <%= link_to "Réponse de l'univers", reponse_path, class: "btn btn-lg btn-primary" %>
+    11:  <% else %> 
+    12:   <%= link_to "S'enregistrer", '/signup', class: "btn btn-lg btn-primary" %>
+  
+app/models/user.rb:14:in `singleton class'
+app/models/user.rb:12:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/helpers/sessions_helper.rb:22:in `current_user'
+app/helpers/sessions_helper.rb:34:in `logged_in?'
+app/views/static_pages/home.html.erb:9:in `_app_views_static_pages_home_html_erb___4303161544993281713_46963454590700'
+Started GET "/" for 127.0.0.1 at 2017-11-01 17:13:57 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (32.0ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 4.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<Class:0x0000556d0fe22a58>):
+     6:     <a href="http://www.railstutorial.org/">Tutoriel Ruby on Rails</a>.
+     7:   </h2>
+     8: 
+     9:  <% if logged_in? %>
+    10:   <%= link_to "Réponse de l'univers", reponse_path, class: "btn btn-lg btn-primary" %>
+    11:  <% else %> 
+    12:   <%= link_to "S'enregistrer", '/signup', class: "btn btn-lg btn-primary" %>
+  
+app/models/user.rb:14:in `singleton class'
+app/models/user.rb:12:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/helpers/sessions_helper.rb:22:in `current_user'
+app/helpers/sessions_helper.rb:34:in `logged_in?'
+app/views/static_pages/home.html.erb:9:in `_app_views_static_pages_home_html_erb___4303161544993281713_46963453180040'
+Started GET "/" for 127.0.0.1 at 2017-11-01 17:20:13 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (37.4ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<Class:0x000056338b8f3170>):
+     6:     <a href="http://www.railstutorial.org/">Tutoriel Ruby on Rails</a>.
+     7:   </h2>
+     8: 
+     9:  <% if logged_in? %>
+    10:   <%= link_to "Réponse de l'univers", reponse_path, class: "btn btn-lg btn-primary" %>
+    11:  <% else %> 
+    12:   <%= link_to "S'enregistrer", '/signup', class: "btn btn-lg btn-primary" %>
+  
+app/models/user.rb:14:in `singleton class'
+app/models/user.rb:12:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/helpers/sessions_helper.rb:22:in `current_user'
+app/helpers/sessions_helper.rb:34:in `logged_in?'
+app/views/static_pages/home.html.erb:9:in `_app_views_static_pages_home_html_erb__1664655889208232268_47389692482940'
+Started GET "/" for 127.0.0.1 at 2017-11-01 17:20:50 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (26.9ms)
+Completed 500 Internal Server Error in 37ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<Class:User (call 'User.connection' to establish a connection)>):
+     6:     <a href="http://www.railstutorial.org/">Tutoriel Ruby on Rails</a>.
+     7:   </h2>
+     8: 
+     9:  <% if logged_in? %>
+    10:   <%= link_to "Réponse de l'univers", reponse_path, class: "btn btn-lg btn-primary" %>
+    11:  <% else %> 
+    12:   <%= link_to "S'enregistrer", '/signup', class: "btn btn-lg btn-primary" %>
+  
+app/models/user.rb:21:in `singleton class'
+app/models/user.rb:12:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/helpers/sessions_helper.rb:22:in `current_user'
+app/helpers/sessions_helper.rb:34:in `logged_in?'
+app/views/static_pages/home.html.erb:9:in `_app_views_static_pages_home_html_erb__1664655889208232268_70291941213960'
+Started GET "/" for 127.0.0.1 at 2017-11-01 17:21:19 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (59.7ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.1ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 7900ms (Views: 7885.1ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2017-11-01 17:21:31 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (2.4ms)
+  Rendered users/_form.html.erb (114.5ms)
+  Rendered users/new.html.erb within layouts/application (119.3ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.3ms)
+  Rendered layouts/_footer.html.erb (1.5ms)
+Completed 200 OK in 320ms (Views: 272.1ms | ActiveRecord: 8.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-11-01 17:21:34 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OBOcsfhxjLaLsW78C805avHmFiY5ZxPLMycUi5oDIPWjyTAtHA5F074MTxXd2sNw/wZ1/uk4qK+3dFK+kksc9w==", "user"=>{"email"=>"moha@malservi.com", "password"=>"[FILTERED]"}, "commit"=>"Créer un Compte"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "moha@malservi.com"], ["LIMIT", 1]]
+  [1m[35mSQL (28.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?)[0m  [["email", "moha@malservi.com"], ["created_at", "2017-11-01 16:21:35.169186"], ["updated_at", "2017-11-01 16:21:35.169186"], ["password_digest", "$2a$10$Pufo6rsuFF1acA6eu2qnm.dmk1o4nqQH41o29H0erN1GN6AjamqUa"]]
+  [1m[35m (108.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 423ms (ActiveRecord: 138.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-11-01 17:21:35 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_shim.html.erb (1.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (6.3ms)
+  Rendered layouts/_footer.html.erb (2.8ms)
+Completed 200 OK in 187ms (Views: 174.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-11-01 17:57:27 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (8.0ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 5663ms (Views: 5607.6ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-01 17:57:34 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_shim.html.erb (1.4ms)
+  Rendered layouts/_header.html.erb (16.3ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 261ms (Views: 257.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-11-01 17:57:43 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fDt1x8lO3DhKpQ211NMeJ55CPcBVeZ7wpp9c/FskUNx2Cj5eShBSDMflfJEIpWShtdjERqCaL6tK7DkJan9weQ=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-01 17:57:43 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (22.9ms)
+  Rendered layouts/_shim.html.erb (1.4ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (1.8ms)
+Completed 200 OK in 211ms (Views: 206.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2017-11-01 17:57:48 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (2.2ms)
+  Rendered users/_form.html.erb (14.0ms)
+  Rendered users/new.html.erb within layouts/application (19.9ms)
+  Rendered layouts/_shim.html.erb (1.4ms)
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 210ms (Views: 206.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2017-11-01 17:58:24 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.7ms)
+  Rendered users/_form.html.erb (12.6ms)
+  Rendered users/new.html.erb within layouts/application (16.6ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (1.7ms)
+Completed 200 OK in 219ms (Views: 169.5ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-01 17:58:36 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (2.0ms)
+Completed 200 OK in 181ms (Views: 177.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2017-11-01 17:58:37 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.8ms)
+  Rendered users/_form.html.erb (18.1ms)
+  Rendered users/new.html.erb within layouts/application (21.6ms)
+  Rendered layouts/_shim.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (1.5ms)
+Completed 200 OK in 164ms (Views: 160.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-11-01 18:02:24 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PYGZ8Z83j2j4IBq0KPQ2pBOAqcFOlfh2Qmcszi9xPPqmWzVte0hGDc2dO13+48y+HWDKGZ7KQxLGNGr7JzkA+A==", "user"=>{"email"=>"idjid@dod.com", "password"=>"[FILTERED]"}, "commit"=>"Créer un Compte"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "idjid@dod.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (7.7ms)
+  Rendered users/_form.html.erb (18.5ms)
+  Rendered users/new.html.erb within layouts/application (22.6ms)
+  Rendered layouts/_shim.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 461ms (Views: 220.4ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-11-01 18:02:31 +0100
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-11-01 18:02:31 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (58.7ms)
+  Rendered layouts/_shim.html.erb (1.8ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 224ms (Views: 220.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-01 18:02:37 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_shim.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (4.2ms)
+  Rendered layouts/_footer.html.erb (2.0ms)
+Completed 200 OK in 183ms (Views: 177.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2017-11-01 18:02:40 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.8ms)
+  Rendered users/_form.html.erb (16.9ms)
+  Rendered users/new.html.erb within layouts/application (23.4ms)
+  Rendered layouts/_shim.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 194ms (Views: 183.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-11-01 18:02:44 +0100
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-11-01 18:02:44 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_shim.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 181ms (Views: 177.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-11-01 18:03:14 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (4.2ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 193ms (Views: 189.4ms | ActiveRecord: 0.0ms)
+
+
